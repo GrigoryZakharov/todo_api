@@ -9,6 +9,9 @@ A simple REST API for managing tasks (Todo) built with **FastAPI**, **SQLAlchemy
 
 ---
 
+<img width="1595" height="938" alt="image" src="https://github.com/user-attachments/assets/75fe9963-0876-4cf5-a3b0-0df22f65173b" />
+
+---
 ## Features
 - Create, read, update, and delete tasks
 - PostgreSQL database integration
