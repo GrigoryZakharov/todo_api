@@ -64,6 +64,7 @@ pytest
 ```
 
 ## API Endpoints
+```
 | Method | Endpoint    | Description           |
 | ------ | ----------- | --------------------- |
 | GET    | /tasks/     | List all tasks        |
@@ -71,7 +72,7 @@ pytest
 | GET    | /tasks/{id} | Retrieve a task by ID |
 | PUT    | /tasks/{id} | Update a task         |
 | DELETE | /tasks/{id} | Delete a task         |
-
+```
 Example Request Payload for POST /tasks
 ```json
 {
