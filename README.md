@@ -29,7 +29,7 @@ A simple REST API for managing tasks (Todo) built with **FastAPI**, **SQLAlchemy
 ---
 
 ## Project Structure
-
+```
 Todo_API/
 ├── backend/
 │ ├── app/ # main application code
@@ -39,7 +39,7 @@ Todo_API/
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
-
+```
 ---
 
 ## Getting Started
