@@ -2,7 +2,10 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, DeclarativeBase
 
-DB_URL = "postgresql://postgres:postgres@db:5432/todo"
+DB_URL = os.getenv(
+    "DATABASE_URL",
+    "postgresql://test:test@localhost:5432/test"
+)
 engine = create_engine(DB_URL, echo=True)
 
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
