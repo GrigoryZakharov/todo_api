@@ -2,10 +2,20 @@ from fastapi import FastAPI, Depends
 from .database import init_db, SessionLocal
 from sqlalchemy.orm import Session
 from . import crud
-from .schemas import CreateTodo, UpdateTodo, TodoResponse
+from .schemas import CreateTodo, UpdateTodo, TodoResponse, TodoListResponse
 from fastapi import HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def get_db():
     db = SessionLocal()
@@ -26,9 +36,9 @@ def health():
 def create_todo(todo : CreateTodo, db : Session = Depends(get_db)):
     return crud.create_todo(db, title = todo.title, description = todo.description)
 
-@app.get("/todos", response_model = list[TodoResponse])
-def get_todos(db : Session = Depends(get_db)):
-    return crud.get_todos(db)
+@app.get("/todos", response_model = TodoListResponse)
+def get_todos(skip : int = 0, limit : int = 0, db : Session = Depends(get_db)):
+    return crud.get_todos(skip, limit, db)
      
 @app.get("/todos/{id}", response_model = TodoResponse)
 def get_todo(id : int, db : Session = Depends(get_db)):

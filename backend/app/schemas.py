@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import List
 
 class TodoBase(BaseModel):
     title : str
@@ -18,3 +19,7 @@ class TodoResponse(TodoBase):
 
     class Config:
         orm_mode = True 
+
+class TodoListResponse(BaseModel):
+    total: int
+    items: List[TodoResponse]

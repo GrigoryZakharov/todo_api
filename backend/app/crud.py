@@ -7,8 +7,10 @@ def create_todo(db_session, title, description):
     db_session.refresh(new_todo)
     return new_todo
 
-def get_todos(db_session):
-    return db_session.query(Todo).all()
+def get_todos(skip, limit, db_session):
+    todos = db_session.query(Todo).offset(skip).limit(limit).all()
+    total = db_session.query(Todo).count()
+    return {"total": total, "items": todos}
     
 def get_todo(db_session, todo_id):
     return db_session.get(Todo, todo_id)
