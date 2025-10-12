@@ -5,29 +5,36 @@
 [![Docker](https://img.shields.io/badge/docker-yes-blue?logo=docker)](https://www.docker.com/)
 [![Tests](https://img.shields.io/badge/tests-pytest-orange)](https://docs.pytest.org/)
 
-A simple REST API for managing tasks (Todo) built with **FastAPI**, **SQLAlchemy**, and **PostgreSQL**. The project is fully containerized using Docker and Docker Compose and includes unit tests with Pytest.
+A full-stack Todo App with FastAPI, PostgreSQL, React, fully containerized with Docker. Features include task CRUD, pagination, and filtering by completed/incomplete tasks.
 
 ---
+
+<img width="1449" height="997" alt="изображение" src="https://github.com/user-attachments/assets/b40e0c4f-deec-4d05-b65a-0864f7c5e6d0" />
+
+<img width="916" height="951" alt="изображение" src="https://github.com/user-attachments/assets/42473559-b6fb-46f9-b98c-aa8bb75a0372" />
+
 
 <img width="1595" height="938" alt="image" src="https://github.com/user-attachments/assets/75fe9963-0876-4cf5-a3b0-0df22f65173b" />
 
 ---
 ## Features
-- Create, read, update, and delete tasks
-- PostgreSQL database integration
-- Dockerized backend for easy deployment
-- Unit tests with Pytest
+
+ - Create, read, update, and delete tasks
+ - Pagination for tasks
+ - Filter tasks by completed/incomplete status
+ - React frontend with TailwindCSS styling
+ - PostgreSQL backend with SQLAlchemy
+ - Fully Dockerized for easy deployment
+ - Unit tests with Pytest
 
 ---
 
 ## Technology Stack
-- Python 3.11
-- FastAPI
-- SQLAlchemy
-- Pydantic
-- PostgreSQL
-- Docker & Docker Compose
-- Pytest
+
+ - Backend: Python 3.11, FastAPI, SQLAlchemy, Pydantic, PostgreSQL
+ - Frontend: React 18, TailwindCSS
+ - Deployment: Docker, Docker Compose
+ - Testing: Pytest
 
 ---
 
@@ -35,10 +42,14 @@ A simple REST API for managing tasks (Todo) built with **FastAPI**, **SQLAlchemy
 ```
 Todo_API/
 ├── backend/
-│ ├── app/ # main application code
-│ ├── tests/ # unit tests
-│ ├── Dockerfile # docker image definition
-│ └── requirements.txt
+│   ├── app/         # FastAPI application
+│   ├── tests/       # Backend unit tests
+│   ├── Dockerfile   # Backend Docker image
+│   └── requirements.txt
+├── todo-frontend/
+│   ├── src/         # React source code
+│   ├── public/      # Static files
+│   └── package.json
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
@@ -58,7 +69,8 @@ cd Todo_API
 docker-compose up --build
 ```
 
-Backend API will be available at: http://localhost:8000/docs
+Backend API: http://localhost:8000/docs
+Frontend: http://localhost:3000
 
 ### 3. Running Tests
 ```bash
@@ -96,13 +108,13 @@ Example Response
 ```
 ### Notes
 
-Make sure Docker and Docker Compose are installed.
+Frontend supports pagination and filtering tasks by status.
 
-Environment variables (like database credentials) should be set in a .env file if you add it later.
+Docker Compose handles both backend and frontend, plus PostgreSQL.
 
-This project is designed to be a clean, easy-to-understand portfolio example for Python backend development.
+Environment variables (e.g., database credentials) can be placed in .env if needed.
 
-For more information about FastAPI, visit FastAPI Docs
+Designed as a clean, portfolio-ready project for full-stack development.
 
 Requirements
 fastapi
