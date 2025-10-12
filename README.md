@@ -9,12 +9,12 @@ A full-stack Todo App with FastAPI, PostgreSQL, React, fully containerized with 
 
 ---
 
-<img width="600" height="997" alt="изображение" src="https://github.com/user-attachments/assets/b40e0c4f-deec-4d05-b65a-0864f7c5e6d0" />
+<img width="550" height="997" alt="изображение" src="https://github.com/user-attachments/assets/b40e0c4f-deec-4d05-b65a-0864f7c5e6d0" />
 
-<img width="500" height="951" alt="изображение" src="https://github.com/user-attachments/assets/42473559-b6fb-46f9-b98c-aa8bb75a0372" />
+<img width="450" height="951" alt="изображение" src="https://github.com/user-attachments/assets/42473559-b6fb-46f9-b98c-aa8bb75a0372" />
 
 
-<img width="600" height="938" alt="image" src="https://github.com/user-attachments/assets/75fe9963-0876-4cf5-a3b0-0df22f65173b" />
+<img width="900" height="938" alt="image" src="https://github.com/user-attachments/assets/75fe9963-0876-4cf5-a3b0-0df22f65173b" />
 
 ---
 ## Features
